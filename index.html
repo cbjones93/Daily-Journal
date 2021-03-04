@@ -1,44 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Daily Journal</title>
-        <link rel="stylesheet" href="./styles/main.css">
-    </head>
-    <body>
-        <header class="header">
-            <h1 class="title">My Daily Journal
-                </h1>
-                <h2 class = "author">By Cody Jones</h2>
-        </header>
-        <main id="container">
-            <section class="journal">
-                <div class="dateDiv"> 
-                    <form>
-                    <h2>Date</h2>
-                    <label for="datelabel"></label>
-                    <input type ="date"> 
-                    <input type ="submit">
-                </form>
-                </div>
-                <div class="subject">
-                    <h2>Concept Covered</h2>
-                </div>
-                <div class="entry">
-                   <h2>Journal Entry</h2>
-                </div>
-                <div class="selector">
-                   <h2> Select Element </h2>
-                </div>
-                <div class ="record"> 
-                    <h3>Record Journal Entry</h3>
-                </div>
-                <aside><h3>Previous Journal Entries</h3></aside>
-            </section>
-        </main>
-        <footer>
-          <h3>&copy; Cody Jones Daily Journal </h3>
-        </footer>
-        <script type="module" src="./scripts/main.js"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+    <h2>Daily Journal</h2>
+    <form action="">
+        <fieldset class=journalContainer>
+<label for ="journalDate">Date of entry</label>
+<input type="date" name="journalDate" id="journalDate">
+        </fieldset>
+        <fieldset>
+            <label for ="conceptsCovered">Concepts Covered</label>
+<input type="text" name="conceptsCovered" id="conceptsCovered">
+        </fieldset>
+        <fieldset>
+            <label for ="journalEntry">Journal Entry</label>
+<input type="text" name="journalEntry" id="journalEntry">
+        </fieldset>
+        <fieldset>
+            <label for ="mood">Mood for the day</label>
+<select name="mood" id="mood">
+    <option value="">Choose an option</option>
+    <option value="Awesome!">Awesome!</option>
+    <option value="Good">Good</option>
+    <option value="Okay">Okay</option>
+    <option value="Bad">Bad</option>
+    <option value="Terrible">Terrible</option>
+
+</select>
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="Record Journal Entry">
+        </fieldset>
+    </form>
+<h3>Entries</h3>
+<div class="journalEntryBox"> 
+    <div id="entryLog"></div>   
+</div>
+
+</main>
+<footer>
+
+</footer>
+<script type="module" src="scripts/main.js"></script>
+</body>
 </html>

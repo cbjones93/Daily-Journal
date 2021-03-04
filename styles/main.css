@@ -4,10 +4,7 @@ header{ background-color: #8fbfb7;
 	display: flex;
 	justify-content: center;
 }
-.author{
-	display: flex;
-	justify-content: center;
-}
+
 main{ 
 	background-color:#e0c9af ;
 
@@ -15,10 +12,9 @@ main{
 footer{
 	background-color: #8fbfb7;
 }
-.journal{
-	text-align: center;
-	border: solid;
-}
-.journal>div {
-	border: dotted;
+
+
+.journalContainer{
+	display: flex;
+	flex-direction: column;
 }
