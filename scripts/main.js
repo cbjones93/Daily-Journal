@@ -1,13 +1,15 @@
 console.log("Welcome to the main module")
-import { getJournalEntries } from "./JournalData.js"
+import { journalList } from "../scripts/feed/JournalEntryList.js"
+import { getJournalEntries } from "../scripts/Data/DataManager.js"
 // import { EntryListComponent } from "./JournalEntryList.js"
 // EntryListComponent();
-
-getJournalEntries()
-.then (entryData => {
-    console.log("Journal Data", entryData)
-})
-
+const showJournalList = ()=>{
+	const journalElement = document.querySelector(".journalEntryBox");
+	getJournalEntries().then((allJournal)=>{
+		journalElement.innerHTML=journalList(allJournal);
+	})
+}
+showJournalList();
 // ------------EVENT LISTENERS-------------///
 const applicationElement = document.querySelector(".dailyJournal");
 

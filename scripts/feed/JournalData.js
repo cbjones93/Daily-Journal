@@ -21,7 +21,3 @@
     You export a function that provides a version of the
     raw data in the format that you want
 */
-export const getJournalEntries = () => {
-return fetch ("http://localhost:8088/journalEntries")
-.then (response =>response.json())
-}

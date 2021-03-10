@@ -1,4 +1,6 @@
 header{ background-color: #8fbfb7;
+	display: flex;
+	justify-content: center;
 }
 .title{
 	display: flex;
@@ -7,6 +9,8 @@ header{ background-color: #8fbfb7;
 
 main{ 
 	background-color:#e0c9af ;
+	display: flex;
+	justify-content: center;
 
 }
 footer{
