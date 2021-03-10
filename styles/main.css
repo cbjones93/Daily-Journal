@@ -1,3 +1,6 @@
+body{
+	background-color:  #8fbfb7;
+}
 header{ background-color: #8fbfb7;
 	display: flex;
 	justify-content: center;
