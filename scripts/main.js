@@ -1,40 +1,54 @@
 console.log("Welcome to the main module")
 import { journalList } from "../scripts/feed/JournalEntryList.js"
-import { getJournalEntries } from "../scripts/Data/DataManager.js"
+import { getJournalEntries, usePostCollection } from "../scripts/Data/DataManager.js"
 // import { EntryListComponent } from "./JournalEntryList.js"
 // EntryListComponent();
-const showJournalList = ()=>{
+const showJournalList = () => {
 	const journalElement = document.querySelector(".journalEntryBox");
-	getJournalEntries().then((allJournal)=>{
-		journalElement.innerHTML=journalList(allJournal);
+	getJournalEntries().then((allJournal) => {
+		journalElement.innerHTML = journalList(allJournal);
 	})
 }
 showJournalList();
 // ------------EVENT LISTENERS-------------///
 const applicationElement = document.querySelector(".dailyJournal");
 
-applicationElement.addEventListener('click', event => { 
-    if (event.target.id ==="recordEntry"){
-        alert(`Entry Recorded!`)
-    }
-})
-applicationElement.addEventListener("click", event => {
-	if (event.target.id === "date"){
-		console.log("user clicked on date")
+applicationElement.addEventListener('click', event => {
+	if (event.target.id === "recordEntry") {
+		alert(`Entry Recorded!`)
 	}
 })
-applicationElement.addEventListener("click", event => {
-	if (event.target.id === "conceptsCovered"){
-		console.log("user clicked on concepts covered")
+applicationElement.addEventListener("change", event => {
+	if (event.target.id === "dateSelector") {
+		const dateValue = (event.target.value)
+		console.log(`User wants to see posts with a date of ${dateValue}`)
+		showFilteredDatePosts(dateValue);
 	}
 })
-applicationElement.addEventListener("click", event => {
-	if (event.target.id === "journalEntry"){
-		console.log("user clicked on journal entry")
+const showFilteredDatePosts = (dateValue) => {
+	const filteredDate = usePostCollection().filter(singlePost => {
+		if (singlePost.date === dateValue) {
+			return singlePost
+		}
+	})
+	const postMoodElement = document.querySelector(".journalEntryBox");
+	postMoodElement.innerHTML = journalList(filteredDate);
+}
+
+
+applicationElement.addEventListener("change", event => {
+	if (event.target.id === "moodSelector") {
+		const moodValue = (event.target.value)
+		console.log(`User wants to see posts with a mood of ${moodValue}`)
+		showFilteredMoodPosts(moodValue);
 	}
 })
-applicationElement.addEventListener("click", event => {
-	if (event.target.id === "mood"){
-		console.log("user clicked on mood")
-	}
-})
+const showFilteredMoodPosts = (moodValue) => {
+	const filteredMood = usePostCollection().filter(singlePost => {
+		if (singlePost.mood === moodValue) {
+			return singlePost
+		}
+	})
+	const postMoodElement = document.querySelector(".journalEntryBox");
+	postMoodElement.innerHTML = journalList(filteredMood);
+}
