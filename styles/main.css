@@ -13,8 +13,7 @@ header{ background-color: #8fbfb7;
 main{ 
 	background-color:#e0c9af ;
 	display: flex;
-	justify-content: center;
-
+	justify-content: space-around;
 }
 footer{
 	background-color: #8fbfb7;
