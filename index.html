@@ -20,11 +20,11 @@
             <div class="moodSelector">
                 <fieldset>
                     <h3>Date</h3>
-                    <input id="dateSelector" type="date" name="journalDate" id="journalDateSelector">
+                    <input id="dateSelector" type="date" name="filterDate">
                 </fieldset>
                 <fieldset>
                     <h3>Mood</h3>
-                    <select name="mood" id="moodSelector">
+                    <select name="moodFilter" id="moodSelector">
                         <option value="">Choose an option</option>
                         <option value="Awesome">Awesome!</option>
                         <option value="Good">Good</option>
@@ -35,34 +35,10 @@
                 </fieldset>
             </div>
         </div>
-        <form action="">
-            <fieldset class=journalContainer>
-                <label for="journalDate">Date of entry</label>
-                <input id="date" type="date" name="journalDate" id="journalDate">
-            </fieldset>
-            <fieldset>
-                <label for="conceptsCovered">Concepts Covered</label>
-                <input id="conceptsCovered" type="text" name="conceptsCovered" id="conceptsCovered">
-            </fieldset>
-            <fieldset>
-                <label for="journalEntry">Journal Entry</label>
-                <input id="journalEntry" type="text" name="journalEntry" id="journalEntry">
-            </fieldset>
-            <fieldset>
-                <label for="mood">Mood for the day</label>
-                <select name="mood" id="mood">
-                    <option value="">Choose an option</option>
-                    <option value="Awesome">Awesome!</option>
-                    <option value="Good">Good</option>
-                    <option value="Okay">Okay</option>
-                    <option value="Bad">Bad</option>
-                    <option value="Terrible">Terrible</option>
-                </select>
-            </fieldset>
-            <fieldset>
-                <input id="recordEntry" type="submit" value="Record Journal Entry">
-            </fieldset>
-        </form>
+            <div class ="entryForm">
+
+            </div>
+            
         <section class="entryContainer">
             <h3>Entries</h3>
             <div class="journalEntryBox">
