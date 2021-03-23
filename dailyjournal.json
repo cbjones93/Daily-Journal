@@ -11,7 +11,7 @@
       "date": "2021-03-10",
       "concept": "Filtering",
       "entry": "Polishing up journal json, should learn more about filtering today!",
-      "mood": "Okay",
+      "mood": "Awesome",
       "id": 3
     },
     {
@@ -27,6 +27,13 @@
       "entry": "Added delete button for posts",
       "mood": "Awesome",
       "id": 6
+    },
+    {
+      "date": "2021-03-23",
+      "concept": "Edit",
+      "entry": "Added Edit Button!",
+      "mood": "Good",
+      "id": 7
     }
   ]
 }
