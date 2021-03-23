@@ -20,7 +20,13 @@
       "entry": "Learned how to create and save post within localhost!",
       "mood": "Awesome",
       "id": 4
+    },
+    {
+      "date": "2021-03-23",
+      "concept": "Delete Button",
+      "entry": "Added delete button for posts",
+      "mood": "Awesome",
+      "id": 6
     }
-    
   ]
 }
