@@ -1,39 +1,76 @@
 {
+  "users": [
+    {
+      "name": "Cody",
+      "email": "cody@home.com",
+      "id": 1
+    },
+    {
+      "name": "cody",
+      "email": "cody@home.com",
+      "id": 2
+    },
+    {
+      "name": "Ryan",
+      "email": "ryan@home.com",
+      "id": 3
+    }
+  ],
   "journalEntries": [
     {
       "date": "2021-03-07",
       "concept": "adding json to daily journal",
       "entry": "Trying to add json material with postman. pls work!",
       "mood": "Okay",
-      "id": 2
+      "id": 2,
+      "userId": 1
     },
     {
       "date": "2021-03-10",
       "concept": "Filtering",
       "entry": "Polishing up journal json, should learn more about filtering today!",
       "mood": "Awesome",
-      "id": 3
+      "id": 3,
+      "userId": 1
     },
     {
       "date": "2021-03-11",
       "concept": "Create New Post",
       "entry": "Learned how to create and save post within localhost!",
       "mood": "Awesome",
-      "id": 4
+      "id": 4,
+      "userId": 1
     },
     {
       "date": "2021-03-23",
       "concept": "Delete Button",
       "entry": "Added delete button for posts",
       "mood": "Awesome",
-      "id": 6
+      "id": 6,
+      "userId": 1
     },
     {
       "date": "2021-03-23",
       "concept": "Edit",
       "entry": "Added Edit Button!",
       "mood": "Good",
-      "id": 7
+      "id": 7,
+      "userId": 1
+    },
+    {
+      "date": "2021-03-25",
+      "concept": "Login",
+      "entry": "Learned how to add login and register functions to posts! Also made it so users can only see their posts.",
+      "mood": "Awesome",
+      "id": 8
+    },
+    {
+      "date": "2021-03-25",
+      "concept": "Register",
+      "entry": "Made register and login options. Also made it so users can only see their posts.",
+      "mood": "Awesome",
+      "id": 9,
+      "userId": 1
     }
   ]
 }
